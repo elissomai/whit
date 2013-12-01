@@ -1,0 +1,51 @@
+#!/usr/bin/env bash
+isConsole=`tty | grep "pts"`
+if [[ -z "$isConsole" ]]; then
+    tmxconf="$HOME/whit/tmux/tmux-nox.conf"
+    base_session="console"
+    tmuxsocket="console"
+else
+    if [[ -z "$1" ]]; then
+        echo "Specify session name as the first argument"
+        exit
+    fi
+    tmxconf="$HOME/whit/tmux/tmux.conf"
+    base_session="$1"
+    tmuxsocket="default"
+fi
+
+tmux_nb=`tmux -L "$tmuxsocket" -f "$tmxconf" ls | grep "^$base_session" | wc -l`
+if [[ "$tmux_nb" == "0" ]]; then
+    if [ -n "$2" ] && [ -n "$3" ]
+    then
+        echo "Launching tmux/app session $base_session::$2::$3 ..."
+    else
+        echo "Launching tmux base session $base_session ..."
+        tmux -L "$tmuxsocket" -f "$tmxconf" new-session -s $base_session
+    fi
+else
+    # Make sure we are not already in a tmux session
+    if [[ -z "$TMUX" ]]; then
+        # Kill defunct sessions first
+        old_sessions=$(tmux -L "$tmuxsocket" -f "$tmxconf" ls 2>/dev/null | grep -v attached | awk -F':' '{print $1}' | egrep "^($base_session)[0-9]{14}$" )
+        for old_session_id in $old_sessions; do
+            tmux -L "$tmuxsocket" -f "$tmxconf" kill-session -t $old_session_id
+        done
+
+        if [ -n "$2" ] && [ -n "$3" ]
+        then
+            tmux -L "$tmuxsocket" -f "$tmxconf" new-window -d -n "$2" "$3"
+        else
+            echo "Launching copy of base session $base_session ..."
+            # Session is is date and time to prevent conflict
+            session_id=$base_session`date +%Y%m%d%H%M%S`
+            tmux -L "$tmuxsocket" -f "$tmxconf" new-session -d -t $base_session -s $session_id
+            # Create a new window in that session
+            tmux -L "$tmuxsocket" -f "$tmxconf" new-window
+            # Attach to the new session
+            # When we detach from it, kill the session
+            tmux -L "$tmuxsocket" -f "$tmxconf" attach-session -d -t $session_id
+            tmux -L "$tmuxsocket" -f "$tmxconf" kill-session -t $session_id
+        fi
+    fi
+fi

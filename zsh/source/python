@@ -1,0 +1,15 @@
+export PYTHONSTARTUP="$HOME/whit/python/rc.py"
+
+function pyenv_virtualenvwrapper_init () {
+    if [ -d $HOME/.pyenv ]; then
+        export PATH="$HOME/.pyenv/bin:$PATH"
+        eval "$(pyenv init -)"
+        local pyenv_version=$(pyenv version | awk '{print $1}')
+        if [ -f $HOME/.pyenv/versions/$pyenv_version/bin/virtualenvwrapper.sh ]; then
+            if [ -d $HOME/.pyenv/plugins/pyenv-virtualenvwrapper ]; then
+                pyenv virtualenvwrapper
+            fi
+        fi
+    fi
+}
+pyenv_virtualenvwrapper_init

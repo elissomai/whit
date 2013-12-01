@@ -1,0 +1,10 @@
+alias vi="vim"
+alias ls="ls --group-directories-first --color -AphlQX"
+alias l="ls -C"
+alias pbcopy="xclip -selection clipboard"
+alias pbpaste="xclip -selection clipboard -o"
+alias ssh='TERM=xterm ssh'
+alias pstree='pstree -Ahl'
+alias split-flac="cuebreakpoints *.cue | shnsplit -t '%t' -o flac *.flac"
+#alias sudo='nocorrect sudo '
+export STARDICT_DATA_DIR="$HOME/whit/dictionary"

@@ -1,0 +1,40 @@
+ZSH=$HOME/whit/zsh/oh-my-zsh
+export PATH=$HOME/whit/bin/bin:$PATH
+ZSH_THEME="../../epiloque"
+# CASE_SENSITIVE="true"
+DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_TITLE=true
+plugins=(celery django coffee cp debian encode64 fabric git git-extras git-flow github heroku node npm pass pip postgres python redis-cli rsync ruby rvm ssh-agent supervisor taskwarrior extract history)
+source $ZSH/oh-my-zsh.sh
+umask 0027
+setopt prompt_subst
+export TERM="xterm-256color"
+#export TERM="screen-256color"
+HISTFILE=$HOME/whit/tmp/zsh.history
+SAVEHIST=10000
+HISTSIZE=10000
+setopt APPEND_HISTORY
+setopt INC_APPEND_HISTORY
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt HIST_IGNORE_ALL_DUPS
+setopt HIST_REDUCE_BLANKS
+setopt HIST_IGNORE_SPACE
+setopt HIST_NO_STORE
+setopt HIST_VERIFY
+setopt EXTENDED_HISTORY
+setopt HIST_SAVE_NO_DUPS
+setopt HIST_EXPIRE_DUPS_FIRST
+setopt HIST_FIND_NO_DUPS
+zstyle ':completion:*' accept-exact '*(N)'
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path $HOME/whit/tmp/zsh.cache
+if [[ -z "`tty | grep "pts"`" ]]; then
+    export ISCONSOLE="YES"
+fi
+for f in $HOME/whit/zsh/source/*; do
+    . $f
+done
+
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting

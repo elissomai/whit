@@ -1,0 +1,33 @@
+[submodule "vendor/z"]
+	path = vendor/z
+	url = https://github.com/rupa/z.git
+[submodule "vendor/rfc"]
+	path = vendor/rfc
+	url = https://github.com/bfontaine/rfc.git
+[submodule "vendor/spark"]
+	path = vendor/spark
+	url = https://github.com/holman/spark.git
+[submodule "vendor/resty"]
+	path = vendor/resty
+	url = https://github.com/micha/resty.git
+[submodule "vendor/v"]
+	path = vendor/v
+	url = https://github.com/rupa/v.git
+[submodule "vendor/gibo"]
+	path = vendor/gibo
+	url = https://github.com/simonwhitaker/gibo.git
+[submodule "vendor/jsawk"]
+	path = vendor/jsawk
+	url = https://github.com/micha/jsawk.git
+[submodule "python/modules/see"]
+	path = python/modules/see
+	url = https://github.com/inky/see.git
+[submodule "vim"]
+	path = vim
+	url = https://github.com/epiloque/whit-vim
+[submodule "vendor/oh-my-zsh"]
+	path = vendor/oh-my-zsh
+	url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "vendor/see"]
+	path = vendor/see
+	url = https://github.com/inky/see.git

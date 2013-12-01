@@ -1,0 +1,5 @@
+[description:"\/ tmp mount options" entry:"1383794301" priority:"L" project:"nominal" status:"pending" tags:"local" uuid:"2d884165-dbfa-4b5a-9132-2e008ae497ea"]
+[description:"\/ media mount options and permissions" entry:"1383794311" priority:"L" project:"nominal" status:"pending" tags:"local" uuid:"0e3c3a2e-28ae-45f9-847c-e9b445205d68"]
+[depends:"8dad1937-5736-4c9e-b83d-364987527854" description:"task data dropbox sync" entry:"1383768000" priority:"L" project:"nominal" status:"pending" tags:"local" uuid:"54920acc-0872-45b8-9bbd-20d7ad285b11"]
+[description:"sensitive data sync implementation" entry:"1383768000" priority:"L" project:"nominal" status:"pending" tags:"local,cli,meta" uuid:"8dad1937-5736-4c9e-b83d-364987527854"]
+[description:"send the form to artak2020@mail.ru" entry:"1384789559" status:"pending" uuid:"3f130cc7-2871-4002-8b55-433c66d60d0b"]
