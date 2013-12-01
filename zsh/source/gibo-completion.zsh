@@ -1,0 +1,1 @@
+../../vendor/gibo/gibo-completion.zsh

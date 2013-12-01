@@ -1,6 +1,6 @@
 ZSH=$HOME/whit/zsh/oh-my-zsh
-export PATH=$HOME/whit/bin/bin:$PATH
-ZSH_THEME="../../epiloque"
+export PATH=$HOME/whit/bin:$PATH
+ZSH_THEME="../../../zsh/epiloque"
 # CASE_SENSITIVE="true"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_AUTO_TITLE=true

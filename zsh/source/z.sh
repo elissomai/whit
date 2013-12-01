@@ -1,1 +1,1 @@
-/home/epiloque/whit/bin/z/z.sh
+../../vendor/z/z.sh
