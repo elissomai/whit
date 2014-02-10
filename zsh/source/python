@@ -1,5 +1,4 @@
 export PYTHONSTARTUP="$HOME/whit/python/rc.py"
-
 function pyenv_virtualenvwrapper_init () {
     if [ -d $HOME/.pyenv ]; then
         export PATH="$HOME/.pyenv/bin:$PATH"
@@ -13,3 +12,7 @@ function pyenv_virtualenvwrapper_init () {
     fi
 }
 pyenv_virtualenvwrapper_init
+
+export PIP_VIRTUALENV_BASE=$WORKON_HOME
+export PIP_RESPECT_VIRTUALENV=true
+
