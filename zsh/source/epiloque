@@ -9,3 +9,4 @@ alias split-flac="cuebreakpoints *.cue | shnsplit -t '%t' -o flac *.flac"
 alias sctl="/home/epiloque/.virtualenvs/usermode/bin/python /home/epiloque/.virtualenvs/usermode/bin/supervisorctl -c /home/epiloque/whit/supervisord.conf"
 #alias sudo='nocorrect sudo '
 export STARDICT_DATA_DIR="$HOME/whit/dictionary"
+alias t='task'

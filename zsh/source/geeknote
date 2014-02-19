@@ -1,0 +1,3 @@
+if [ -f ~/.virtualenvs/geeknote/bin/python ]; then
+    alias en='~/.virtualenvs/geeknote/bin/python ~/.virtualenvs/geeknote/bin/geeknote'
+fi

@@ -4,7 +4,7 @@ ZSH_THEME="../../../zsh/epiloque"
 # CASE_SENSITIVE="true"
 #DISABLE_AUTO_UPDATE="true"
 #DISABLE_AUTO_TITLE=true
-plugins=(celery django coffee cp debian encode64 fabric git git-extras git-flow github heroku node npm pass pip postgres python redis-cli rsync ruby rvm ssh-agent supervisor taskwarrior extract history)
+plugins=(celery django coffee cp debian encode64 fabric git git-extras git-flow github heroku node npm pass pip postgres python redis-cli rsync ruby rvm ssh-agent supervisor extract history)
 source $ZSH/oh-my-zsh.sh
 umask 0027
 setopt prompt_subst

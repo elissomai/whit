@@ -76,7 +76,7 @@ color.pri.M=rgb250                            # [9]  Color of priority:M tasks
 color.pri.L=rgb245                            # [9]  Color of priority:L tasks
 color.tagged=rgb031                           # [10]  Color of tagged tasks
 color.alternate=on color233                   # [11] Alternate color for line coloring
-default.command=long                          # When no arguments are specified
+default.command=all                          # When no arguments are specified
 
 _forcecolor=no                                # Forces color to be on, even for non TTY output
 blanklines=true                               # Use more whitespace in output
