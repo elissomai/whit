@@ -22,12 +22,12 @@
 [submodule "python/modules/see"]
         path = python/modules/see
         url = https://github.com/inky/see.git
-[submodule "vim"]
-        path = vim
-        url = https://github.com/epiloque/whit-vim
 [submodule "vendor/see"]
         path = vendor/see
         url = https://github.com/inky/see.git
 [submodule "vendor/oh-my-zsh"]
         path = vendor/oh-my-zsh
         url = https://github.com/robbyrussell/oh-my-zsh.git
+[submodule "vim"]
+	path = vim
+	url = https://github.com/epiloque/whit-vim
