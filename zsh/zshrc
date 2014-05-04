@@ -35,6 +35,3 @@ fi
 for f in $HOME/whit/zsh/source/*; do
     . $f
 done
-
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
