@@ -32,7 +32,7 @@ if [[ $wordchecknum -gt "3" ]]; then
 fi
 
 # Lookup word and reformat/highlight
-sdcv -u "dictd_www.dict.org_wn" $1 | \
+sdcv $1 | \
 # lookup, delete extrenous first lines, delete last empty line
 sed '1,3d' | sed '/^*$/d' | \
 # print more obvious word type
