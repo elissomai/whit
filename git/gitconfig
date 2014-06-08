@@ -1,6 +1,6 @@
 [user]
-        name = epiloque
-        email = robots+github@epiloque.com
+        name = elissomai
+        email = elissomai+git@gmail.com
 [credential]
         helper = cache --timeout=3600
 [color]
